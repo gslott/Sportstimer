@@ -8,36 +8,208 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <LinearLayout
-        android:id="@+id/LO_mid"
-        android:layout_width="368dp"
-        android:layout_height="230dp"
+    <TextView
+        android:id="@+id/TV_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:text="@string/lbl_timer"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/LO_reslutboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LO_reslutboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/TW_home"
+        <LinearLayout
+            android:id="@+id/LO_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
+            android:gravity="bottom|center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
 
-        <TextView
-            android:id="@+id/TW_gone"
+            <TextView
+                android:id="@+id/TV_home_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/homeTeam_lable"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="151dp"
+                tools:layout_editor_absoluteY="99dp" />
+
+            <TextView
+                android:id="@+id/TV_home"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/home_lable"
+                android:textSize="50sp"
+                tools:layout_editor_absoluteX="171dp"
+                tools:layout_editor_absoluteY="118dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LO_separator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TextView" />
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
 
+            <TextView
+                android:id="@+id/TV_result"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/result_separator"
+                android:textSize="50sp"
+                tools:layout_editor_absoluteX="188dp"
+                tools:layout_editor_absoluteY="118dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LO_away"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom|center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/TV_away_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/awayTeam_lable"
+                android:textSize="30sp"
+                tools:layout_editor_absoluteX="197dp"
+                tools:layout_editor_absoluteY="99dp" />
+
+            <TextView
+                android:id="@+id/TV_gone"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:text="@string/away_lable"
+                android:textSize="50sp"
+                tools:layout_editor_absoluteX="197dp"
+                tools:layout_editor_absoluteY="118dp" />
+        </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/BT_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical|center_horizontal|center"
+        android:text="@string/home_button"
+        app:layout_constraintBottom_toTopOf="@+id/BT_home_decrese"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BT_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/away_button"
+        app:layout_constraintBottom_toTopOf="@+id/BT_away_decrese"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BT_home_decrese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/home_button_decrese"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BT_away_decrese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/away_button_decrese"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/BT_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/lbl_start"
+        app:layout_constraintBottom_toTopOf="@+id/BT_stop"
+        app:layout_constraintEnd_toStartOf="@+id/BT_away"
+        app:layout_constraintStart_toEndOf="@+id/BT_home"
+        app:layout_constraintTop_toBottomOf="@+id/LO_reslutboard" />
+
+    <Button
+        android:id="@+id/BT_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/lbl_stop"
+        app:layout_constraintBottom_toTopOf="@+id/BT_reset"
+        app:layout_constraintEnd_toStartOf="@+id/BT_away"
+        app:layout_constraintStart_toEndOf="@+id/BT_home"
+        app:layout_constraintTop_toBottomOf="@+id/BT_start" />
+
+    <Button
+        android:id="@+id/BT_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/lbl_reset"
+        app:layout_constraintEnd_toStartOf="@+id/BT_away"
+        app:layout_constraintStart_toEndOf="@+id/BT_home"
+        app:layout_constraintTop_toBottomOf="@+id/BT_stop" />
 
 </android.support.constraint.ConstraintLayout>

@@ -7,4 +7,14 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_homeDecrese"
+        android:orderInCategory="200"
+        android:title="@string/action_homeDecrese"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_awayDecrese"
+        android:orderInCategory="300"
+        android:title="@string/action_awayDecrese"
+        app:showAsAction="never" />
 </menu>

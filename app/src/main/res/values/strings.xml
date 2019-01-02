@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Sports timer</string>
     <string name="action_settings">Settings</string>
+    <string name="home_button">Home +</string>
+    <string name="away_button">Away +</string>
+    <string name="home_lable">0</string>
+    <string name="away_lable">0</string>
+    <string name="action_awayDecrese">Away -</string>
+    <string name="action_homeDecrese">Home -</string>
+    <string name="home_button_decrese">Home -</string>
+    <string name="away_button_decrese">Away -</string>
+    <string name="result_separator"> - </string>
+    <string name="homeTeam_lable" >Home</string>
+    <string name="awayTeam_lable">Away</string>
+    <string name="lbl_start">Start</string>
+    <string name="lbl_stop">Stop</string>
+    <string name="lbl_timer">00:00:00:0</string>
+    <string name="lbl_reset">Reset</string>
 </resources>
